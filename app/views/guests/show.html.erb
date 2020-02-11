@@ -1,0 +1,6 @@
+<h1>Hi my name is <%= @guest.name %>, and my occupation is <%= @guest.occupation %>.</h1>
+
+<% @guest.episodes do |e| %>
+  <%= link_to e.date, episode_path(e) %>
+  <%= e.appearance.rating %>
+<% end %>
